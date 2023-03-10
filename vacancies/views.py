@@ -17,6 +17,7 @@ class VacanciesDetailView(DetailView):
     template_name = 'vacancies/vacancy.html'
 
 
-class CompaniesListView(ListView):
+class CompaniesDetailView(DetailView):
     model = Vacancies
-    template_name = 'vacancies/vacancies.html'
+    template_name = 'vacancies/company.html'
+
