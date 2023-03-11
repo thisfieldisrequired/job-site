@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from vacancies.models import Vacancy, Companies
+from vacancies.models import Vacancy, Company
 
 
 def index(request):
@@ -18,7 +18,7 @@ class VacanciesDetailView(DetailView):
 
 
 class CompaniesDetailView(DetailView):
-    model = Vacancy
-    slug_field = 'id'
+    model = Company
     template_name = 'vacancies/company.html'
+
 

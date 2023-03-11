@@ -18,3 +18,11 @@ class Company(models.Model):
     logo = models.URLField(default='https://place-hold.it/100x60')
     description = models.TextField()
     employee_count = models.IntegerField()
+
+
+class Specialty(models.Model):
+    code = models.SlugField()
+    title = models.CharField(max_length=120)
+    picture = models.URLField(default='https://place-hold.it/100x60')
+
+
