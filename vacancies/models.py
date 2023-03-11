@@ -12,8 +12,9 @@ class Vacancy(models.Model):
     published_at = models.DateField(auto_now_add=True)
 
 
-class Companies(models.Model):
+class Company(models.Model):
     name = models.CharField(max_length=120)
-
-    def __str__(self):
-        return self.name
+    location = models.CharField(max_length=64)
+    logo = models.URLField(default='https://place-hold.it/100x60')
+    description = models.TextField()
+    employee_count = models.IntegerField()
