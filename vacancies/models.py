@@ -25,4 +25,5 @@ class Specialty(models.Model):
     title = models.CharField(max_length=120)
     picture = models.URLField(default='https://place-hold.it/100x60')
 
-
+    def __str__(self):
+        return self.code

@@ -1,11 +1,12 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 from vacancies.models import Vacancy, Company
 
 
-def index(request):
-    return render(request, 'vacancies/index.html')
 
+class MainPageView(TemplateView):
+    template_name = 'vacancies/index.html'
+#    get_context_data
 
 class VacanciesListView(ListView):
     model = Vacancy
@@ -20,5 +21,6 @@ class VacanciesDetailView(DetailView):
 class CompaniesDetailView(DetailView):
     model = Company
     template_name = 'vacancies/company.html'
+
 
 
